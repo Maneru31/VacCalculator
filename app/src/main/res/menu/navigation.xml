@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:icon="@drawable/ic_calculator1"
+        android:title="Калькулятор"
+        android:id="@+id/calculator"
+        app:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/ic_history2"
+        android:title="История"
+        android:id="@+id/history"
+        app:showAsAction="ifRoom"/>
+
+</menu>
