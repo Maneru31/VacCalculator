@@ -5,7 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.customview.customView
 import com.example.vacalculator.databinding.FragmentCalculator2Binding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.dialog.MaterialDialogs
+import org.w3c.dom.Text
 
 class CalculatorFragment : Fragment() {
     override fun onCreateView(
@@ -19,6 +25,18 @@ class CalculatorFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentCalculator2Binding.bind(view)
+        val dialog = MaterialDialog(requireContext())
+            .customView(R.layout.resoult_dialog)
+        val count : TextView = dialog.findViewById(R.id.viewCount)
+        val days : TextView = dialog.findViewById(R.id.resualtdays)
+        val btnYes : TextView = dialog.findViewById(R.id.btnYes)
+        val btnNo : TextView = dialog.findViewById(R.id.btnNo)
+
+
+                binding.btnResult.setOnClickListener{
+
+                    dialog.show ()
+        }
 
     }
 
