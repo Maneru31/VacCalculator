@@ -27,17 +27,26 @@ class CalculatorFragment : Fragment() {
         val binding = FragmentCalculator2Binding.bind(view)
         val dialog = MaterialDialog(requireContext())
             .customView(R.layout.resoult_dialog)
-        val count : TextView = dialog.findViewById(R.id.viewCount)
-        val days : TextView = dialog.findViewById(R.id.resualtdays)
-        val btnYes : TextView = dialog.findViewById(R.id.btnYes)
-        val btnNo : TextView = dialog.findViewById(R.id.btnNo)
+        val caldg = MaterialDialog(requireContext())
+            .customView(R.layout.calendar_dialog)
+        val count: TextView = dialog.findViewById(R.id.viewCount)
+        val days: TextView = dialog.findViewById(R.id.resualtdays)
+        val btnYes: TextView = dialog.findViewById(R.id.btnYes)
+        val btnNo: TextView = dialog.findViewById(R.id.btnNo)
+        val calendardg: TextView = dialog.findViewById(R.id.calendar)
 
 
-                binding.btnResult.setOnClickListener{
+        binding.btnResult.setOnClickListener {
 
-                    dialog.show ()
+            dialog.show()
         }
 
+
+
+
+        binding.startdate.setOnClickListener {
+            caldg.show()
+        }
     }
 
 
