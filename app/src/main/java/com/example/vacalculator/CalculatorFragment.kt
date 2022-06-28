@@ -49,13 +49,20 @@ class CalculatorFragment : Fragment() {
 
         binding.btnResult.setOnClickListener {
             if (secondDate != null || firstDate != null){
+                if (binding.editHow != null){
             val diff: Long = secondDate!!.time - firstDate!!.time
             val second = diff / 1000
             val minutes = second / 60
             val hours = minutes / 60
             val days = hours / 24
-            countDay.text = days.toString()
+                    var vacCal : Int = 365 - binding.editHow.text.toString().toInt()
+                    var reSult : Int = vacCal * days.toInt()
+                    countDay.text = reSult.toString()
             dialog.show()
+                }
+                else{
+                    Toast.makeText(requireContext(), "Запишите сколько дней", Toast.LENGTH_SHORT).show()
+                }
         }else {
                 Toast.makeText(requireContext(), "Выберите дату", Toast.LENGTH_SHORT).show()
             }
