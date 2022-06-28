@@ -25,6 +25,9 @@
     </androidx.constraintlayout.widget.ConstraintLayout> <!-- Верхнее окно -->
 
 
+
+
+
     <DatePicker
         android:id="@+id/calendar"
         android:layout_width="300dp"
